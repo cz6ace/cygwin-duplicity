@@ -1,0 +1,11 @@
+--- origsrc/duplicity-0.6.19/setup.py	2012-05-22 09:58:53.000000000 -0500
++++ src/duplicity-0.6.19/setup.py	2012-10-04 22:51:13.314120900 -0500
+@@ -45,7 +45,7 @@ if os.name == 'posix':
+ data_files = [('share/man/man1',
+                ['bin/duplicity.1',
+                 'bin/rdiffdir.1']),
+-              ('share/doc/duplicity-%s' % version_string,
++              ('share/doc/duplicity',
+                ['COPYING',
+                 'README',
+                 'README-REPO',
