@@ -1,7 +1,7 @@
 inherit python-distutils
 
 NAME="duplicity"
-VERSION=0.6.22
+VERSION=0.6.23
 RELEASE=1
 CATEGORY="Utils"
 SUMMARY="Encrypted bandwidth-efficient backup system"
@@ -15,4 +15,12 @@ HOMEPAGE="http://www.nongnu.org/duplicity/"
 SRC_URI="http://code.launchpad.net/duplicity/0.6-series/${VERSION}/+download/${NAME}-${VERSION}.tar.gz"
 PATCH_URI="01-docdir.patch"
 
-REQUIRES="dbus lftp ncftp"
+REQUIRES="ca-certificates dbus lftp ncftp"
+
+src_install() {
+	cd ${B}
+	python_distutils_install
+
+	dodir /etc/${NAME}
+	dosym /usr/ssl/cert.pem /etc/${NAME}/cacert.pem
+}
