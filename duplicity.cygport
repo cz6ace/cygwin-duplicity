@@ -2,7 +2,7 @@ inherit python-distutils
 
 NAME="duplicity"
 VERSION=0.6.23
-RELEASE=1
+RELEASE=2
 CATEGORY="Utils"
 SUMMARY="Encrypted bandwidth-efficient backup system"
 DESCRIPTION="Duplicity backs directories by producing encrypted tar-format
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.nongnu.org/duplicity/"
 SRC_URI="http://code.launchpad.net/duplicity/0.6-series/${VERSION}/+download/${NAME}-${VERSION}.tar.gz"
 PATCH_URI="01-docdir.patch"
 
-REQUIRES="ca-certificates dbus lftp ncftp"
+REQUIRES="ca-certificates dbus lftp ncftp girepository-GLib2.0"
 
 src_install() {
 	cd ${B}
