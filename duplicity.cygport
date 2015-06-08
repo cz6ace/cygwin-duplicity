@@ -1,8 +1,8 @@
 inherit python-distutils
 
 NAME="duplicity"
-VERSION=0.6.23
-RELEASE=2
+VERSION=0.6.26
+RELEASE=1
 CATEGORY="Utils"
 SUMMARY="Encrypted bandwidth-efficient backup system"
 DESCRIPTION="Duplicity backs directories by producing encrypted tar-format
@@ -13,7 +13,10 @@ uses GnuPG to encrypt and/or sign these archives, they will be safe from
 spying and/or modification by the server."
 HOMEPAGE="http://www.nongnu.org/duplicity/"
 SRC_URI="http://code.launchpad.net/duplicity/0.6-series/${VERSION}/+download/${NAME}-${VERSION}.tar.gz"
-PATCH_URI="01-docdir.patch"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/duplicity.git/plain/duplicity-0.6.25-deprecation.patch?h=f22
+	01-docdir.patch
+"
 
 REQUIRES="ca-certificates dbus lftp ncftp girepository-GLib2.0"
 
