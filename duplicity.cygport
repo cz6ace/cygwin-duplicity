@@ -1,7 +1,7 @@
 inherit python-distutils
 
 NAME="duplicity"
-VERSION=0.6.26
+VERSION=0.7.05
 RELEASE=1
 CATEGORY="Utils"
 SUMMARY="Encrypted bandwidth-efficient backup system"
@@ -12,9 +12,8 @@ the parts of files that have changed since the last backup. Because duplicity
 uses GnuPG to encrypt and/or sign these archives, they will be safe from
 spying and/or modification by the server."
 HOMEPAGE="http://www.nongnu.org/duplicity/"
-SRC_URI="http://code.launchpad.net/duplicity/0.6-series/${VERSION}/+download/${NAME}-${VERSION}.tar.gz"
+SRC_URI="http://code.launchpad.net/duplicity/0.7-series/${VERSION}/+download/${NAME}-${VERSION}.tar.gz"
 PATCH_URI="
-	http://pkgs.fedoraproject.org/cgit/duplicity.git/plain/duplicity-0.6.25-deprecation.patch?h=f22
 	01-docdir.patch
 "
 
